@@ -4,6 +4,10 @@ public class MemberServiceImpl implements MemberService{
 
     private MemberRepository memberRepository;
 
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
+
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
@@ -18,3 +22,6 @@ public class MemberServiceImpl implements MemberService{
         return memberRepository.findById(memberId);
     }
 }
+
+
+
